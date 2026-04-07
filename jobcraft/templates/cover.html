@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 11pt;
+    line-height: 1.7;
+    color: #1a1a2e;
+    background: #fff;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 0;
+  }
+
+  .sender {
+    margin-bottom: 40px;
+  }
+
+  .sender-name {
+    font-size: 16pt;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 2px;
+  }
+
+  .sender-details {
+    font-size: 9pt;
+    color: #7a8899;
+    line-height: 1.6;
+  }
+
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 44px;
+  }
+
+  .recipient {
+    font-size: 9.5pt;
+    color: #3a3a4a;
+    line-height: 1.6;
+  }
+
+  .date {
+    font-size: 9pt;
+    color: #9aa5b1;
+  }
+
+  .subject {
+    font-size: 10pt;
+    font-weight: 600;
+    color: #3d5a80;
+    margin-bottom: 28px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eef0f4;
+  }
+
+  .body p {
+    margin-bottom: 22px;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .closing {
+    margin-top: 40px;
+    font-size: 10pt;
+    color: #3a3a4a;
+  }
+
+  .signature {
+    margin-top: 28px;
+    font-size: 11pt;
+    font-weight: 600;
+    color: #1a1a2e;
+  }
+
+  @media print {
+    .page { padding: 40px 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="sender">
+    <div class="sender-name">{{ cv.header.name }}</div>
+    <div class="sender-details">
+      {% if cv.header.contact.email %}{{ cv.header.contact.email }}{% endif %}
+      {% if cv.header.contact.phone %} · {{ cv.header.contact.phone }}{% endif %}
+      {% if cv.header.contact.location %} · {{ cv.header.contact.location }}{% endif %}
+    </div>
+  </div>
+
+  <div class="meta">
+    <div class="recipient">
+      <strong>{{ job.company or "Le recruteur" }}</strong><br>
+      {% if job.location %}{{ job.location }}{% endif %}
+    </div>
+    <div class="date">{{ date }}</div>
+  </div>
+
+  <div class="subject">Objet : Candidature — {{ job.title }}</div>
+
+  <div class="body">
+    {% for para in cover.paragraphs %}
+    <p>{{ para }}</p>
+    {% endfor %}
+  </div>
+
+  <div class="closing">{{ cover.closing }}</div>
+  <div class="signature">{{ cv.header.name }}</div>
+
+</div>
+</body>
+</html>

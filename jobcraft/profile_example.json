@@ -1,0 +1,74 @@
+{
+  "name": "Marie Dupont",
+  "title": "Développeuse Backend Senior",
+  "location": "Paris, France",
+  "contact": {
+    "email": "marie.dupont@email.com",
+    "phone": "+33 6 12 34 56 78",
+    "linkedin": "https://linkedin.com/in/marie-dupont",
+    "github": "https://github.com/mariedupont"
+  },
+  "experiences": [
+    {
+      "role": "Développeuse Backend Senior",
+      "company": "FinTech Startup XYZ",
+      "period": "2021 — aujourd'hui",
+      "location": "Paris (hybride)",
+      "achievements": [
+        "Conçu et déployé une API REST traitant 2M de requêtes/jour sur AWS, avec un uptime de 99,97%",
+        "Réduit le temps de latence médian de 340ms à 80ms via un refactoring du cache Redis",
+        "Piloté la migration PostgreSQL → DynamoDB pour 3 microservices critiques, zéro downtime",
+        "Encadré 2 développeurs juniors avec des revues de code hebdomadaires et sessions de pair-programming"
+      ],
+      "technologies": ["Python", "FastAPI", "PostgreSQL", "Redis", "AWS Lambda", "Docker", "Kubernetes"]
+    },
+    {
+      "role": "Développeuse Backend",
+      "company": "Agence Web ABC",
+      "period": "2018 — 2021",
+      "location": "Lyon",
+      "achievements": [
+        "Développé 12 APIs RESTful pour des clients e-commerce, de 50k à 500k utilisateurs actifs",
+        "Mis en place un pipeline CI/CD (GitHub Actions + ArgoCD) réduisant les déploiements de 2h à 8min",
+        "Automatisé les tests de régression, portant la couverture de 34% à 87%"
+      ],
+      "technologies": ["Python", "Django", "MySQL", "Docker", "Jenkins"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master Informatique — Génie Logiciel",
+      "school": "Université Claude Bernard Lyon 1",
+      "year": "2018",
+      "detail": "Mémoire sur les architectures microservices"
+    }
+  ],
+  "skills": {
+    "technical": ["Python", "FastAPI", "Django", "PostgreSQL", "Redis", "DynamoDB"],
+    "tools": ["Docker", "Kubernetes", "AWS", "Terraform", "GitHub Actions"],
+    "soft": ["Communication claire", "Autonomie", "Mentorat", "Rigueur"]
+  },
+  "languages": [
+    {"lang": "Français", "level": "Langue maternelle"},
+    {"lang": "Anglais", "level": "Courant (C1)"},
+    {"lang": "Espagnol", "level": "Intermédiaire (B1)"}
+  ],
+  "certifications": [
+    "AWS Certified Developer – Associate (2023)",
+    "Kubernetes CKAD (2022)"
+  ],
+  "projects": [
+    {
+      "name": "OpenBudget",
+      "description": "Application open-source de suivi budgétaire, 800 étoiles GitHub",
+      "tech": "FastAPI + React + PostgreSQL"
+    }
+  ],
+  "values": ["qualité du code", "impact mesurable", "autonomie", "équilibre vie pro/perso"],
+  "career_goals": "Rejoindre une équipe technique ambitieuse sur un produit à fort impact, avec des responsabilités techniques croissantes (Lead Dev ou architecte à terme).",
+  "salary_expectations": {
+    "min": 65000,
+    "max": 80000,
+    "currency": "EUR"
+  }
+}
